@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alert Us!</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div class="site-wrapper">	
+		<div class="site-wrapper-inner container text-center">
+			<img src="img/alert.png" alt="..." class="img-rounded">
+			<h2 class="text-center">ALERT US!!</h2>	
+				<input type="text" class="form-control text-center" name="address" placeholder="Address or Zip Code">
+				<div class="row">
+					<div class="col-xs-6 locate">
+						<button type="button" class="btn btn-default col-xs-12">Locate Me</button>
+					</div>					
+					<div class="col-xs-6 submit">
+						<button type="button" class="btn btn-default col-xs-12">Submit</button>
+					</div>
+				</div>					
+		</div>		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="js/jquery.flexverticalcenter.js"></script>
+
+    <script>
+	  $(document).ready(function() {
+	    $('.site-wrapper-inner').flexVerticalCenter();
+	  });
+  	</script>
+
+</body>
+</html>
