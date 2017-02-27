@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alert Us!</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="result.css">
+	<link href="css/jquery.circliful.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+	<div id=”myStat” data-text=”35%” data-info=”Earthquake Probality” data-fontsize=”38″ data-percent=”35″ data-fgcolor=”#61a9dc” data-bgcolor=”#eee” data-fill=”#ddd”>
+						
+					</div>
+
+	<div class="body-wrapper container">
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="col-sm-12 report text-center"" id="weather-box">
+					<img src="img/weather.png" alt="..." class="img-rounded">
+					<h1>Weather Alerts!</h1>
+					<h1>12 &#8451; </h1>
+					<div class="button-grp">
+						<button type="button" class="button">View Details</button>
+						<button type="button" class="button">Alert Subscription</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="col-sm-12 report text-center" id="earthquake-box">
+					<img src="img/earthquakes.png" alt="..." class="img-rounded">
+					<h1>Earthquake Alerts!</h1>
+
+					
+
+					<div class="button-grp">
+						<button type="button" class="button">View Details</button>
+						<button type="button" class="button">Alert Subscription</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="col-sm-12 report text-center" id="crime-box">
+					<img src="img/crime.png" alt="..." class="img-rounded">
+					<h1>Crime Alerts!</h1>
+					<div class="button-grp">
+						<button type="button" class="button">View Details</button>
+						<button type="button" class="button">Alert Subscription</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.circliful.min.js"></script>
+
+    <script>
+		$( document ).ready(function() {
+			$('#myStat').circliful();
+	    });
+	</script>
+
+</body>
+</html>

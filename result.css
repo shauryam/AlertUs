@@ -1,0 +1,54 @@
+html, body{
+	background-color: #f3f3f3;
+}
+
+.body-wrapper{
+	padding: 20px 20px;
+}
+
+.report{
+	background-color: white;
+	min-height: 200px;
+	border-radius: 8px;
+	margin: 20px 0px;
+	color: #f3f3f3;
+	font-family: 'Nunito', sans-serif;
+}
+
+#weather-box{
+	background-color: #009C8E;
+}
+
+#earthquake-box{
+	background-color: #15bcd6;
+}
+
+#crime-box{
+	background-color: #56707e;
+}
+
+img{
+	max-width: 35%;
+	margin-top: 5%;
+}
+
+h2{
+	margin-top: 35px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.button-grp{
+  margin: 5px 0px;
+}
+
+.button {	
+  width: 80%;
+  font-family: Arial;
+  margin: 5px 0px;
+  color: #f3f3f3;
+  font-size: 16px;
+  background-color: Transparent;
+  padding: 5px 10px;
+  border: solid #f3f3f3 1px;
+  text-decoration: none;
+}

@@ -15,10 +15,10 @@
 		<div class="site-wrapper-inner container text-center">
 			<img src="img/alert.png" alt="..." class="img-rounded">
 			<h2 class="text-center">ALERT US!!</h2>	
-				<input type="text" class="form-control text-center" name="address" placeholder="Address or Zip Code">
+				<input type="text" id="pac-input" class="form-control text-center" name="address" placeholder="Address or Zip Code">
 				<div class="row">
 					<div class="col-xs-6 locate">
-						<button type="button" class="btn btn-default col-xs-12">Locate Me</button>
+						<button type="button" class="btn btn-default col-xs-12" onclick="getLocation()">Locate Me</button>
 					</div>					
 					<div class="col-xs-6 submit">
 						<button type="button" class="btn btn-default col-xs-12">Submit</button>
@@ -32,10 +32,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="js/jquery.flexverticalcenter.js"></script>
 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA3LQfSoedWkRWhxJayT825G2lnWY-zHI&libraries=places"></script>
+
     <script>
-	  $(document).ready(function() {
-	    $('.site-wrapper-inner').flexVerticalCenter();
-	  });
+
+	    $(document).ready(function() {
+	      $('.site-wrapper-inner').flexVerticalCenter();
+	    });
+  	
+		var input = document.getElementById('pac-input');
+		var autocomplete = new google.maps.places.Autocomplete(input);
+		autocomplete.addListener('place_changed', function(){
+		    var place = autocomplete.getPlace();
+		    var coordinates = place.geometry.location;
+		    latitude = coordinates.lat();
+		    longitude = coordinates.lng();
+		    console.log("Lat - " + latitude + " Long - " + longitude );
+		});
+
+		function getLocation() {
+		    if (navigator.geolocation) {
+		        navigator.geolocation.getCurrentPosition(function(position) {
+		        	alert("Hey");
+		        	document.getElementById("myText").value = "Latitude: " + position.coords.latitude + "Longitude: "+ position.coords.longitude;
+		        });
+		    } 
+		    else {
+		        console.log("Geolocation is not supported by this browser.");
+		    }
+		}
+
   	</script>
 
 </body>
